@@ -1,89 +1,104 @@
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  margin: 0;
-  padding: 40px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #433a4b, #3bf0d8);
+    margin: 0;
+    padding: 40px;
 }
 
 .container {
-  display: flex;
-  gap: 30px;
+    display: flex;
+    gap: 30px;
 }
 
 .card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 320px;
+    background: #caa5ea;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
 }
 
 .card h2 {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-input, select, textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
 }
 
 button {
-  margin-top: 15px;
-  width: 100%;
-  padding: 10px;
-  background: #5a2ee0;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: #da6c9f;
+    color: #9dc980;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .events {
-  width: 400px;
+    width: 400px;
 }
 
 .actions {
-  display: flex;
-  gap: 10px;
+    display: flex;
+    gap: 10px;
 }
 
 .actions button {
-  width: 50%;
+    width: 50%;
 }
 
 .event {
-  background: #f2f3ff;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 15px;
-  position: relative;
+    background: #4e5067;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    position: relative;
 }
 
 .event .delete {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: red;
-  color: white;
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  text-align: center;
-  cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: rgb(228, 194, 194);
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    cursor: pointer;
 }
 
 .tag {
-  display: inline-block;
-  padding: 3px 8px;
-  background: #4f46e5;
-  color: #fff;
-  border-radius: 20px;
-  font-size: 12px;
-  margin-top: 5px;
+    display: inline-block;
+    padding: 3px 8px;
+    background: #4f46e5;
+    color: #f0e7e7;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.dom-demo {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.dom-demo p {
+    background: #385067;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 8px;
+    font-size: 14px;
 }
