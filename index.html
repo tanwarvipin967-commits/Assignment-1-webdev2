@@ -10,6 +10,7 @@
 <body>
 
     <div class="container">
+
         <!-- Add Event -->
         <div class="card">
             <h2>Add New Event</h2>
@@ -25,12 +26,12 @@
                 <option>Conference</option>
                 <option>Social</option>
                 <option>Workshop</option>
-                <Option>Meetup</Option>
+                <option>Meetup</option>
                 <option>Webinar</option>
             </select>
 
             <label>Description</label>
-            <textarea id="description"></textarea> 
+            <textarea id="description"></textarea>
 
             <button onclick="addEvent()">Add Event</button>
         </div>
@@ -40,20 +41,27 @@
             <h2>My Events</h2>
 
             <div class="actions">
-                <button onclick="clearEvents()">Clear All Events</button>
-                <button onclick="addSampleEvents()">Add Sample Events</button>
+                <button onclick="clearEvents()">Clear All</button>
+                <button onclick="addSampleEvents()">Sample Events</button>
             </div>
 
             <div id="eventList"></div>
         </div>
     </div>
+
     <!-- DOM Manipulation Demo -->
     <div class="card dom-demo">
         <h2>DOM Manipulation Demo</h2>
 
-        <div id="domOutput">
-            <p><strong>Waiting for action...</strong></p>
+        <h3>innerText vs innerHTML vs textContent</h3>
+
+        <div id="demoBox">
+            &lt;strong&gt;Bold Text&lt;/strong&gt; with spaces
         </div>
+
+        <div id="domOutput"></div>
+
+        <p class="key-display">You pressed: <span id="keyPressed">None</span></p>
     </div>
 
     <script src="script.js"></script>

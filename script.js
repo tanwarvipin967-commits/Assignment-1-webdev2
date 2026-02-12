@@ -1,12 +1,39 @@
 const domOutput = document.getElementById("domOutput");
-
-function showDOMAction(message) {
-    domOutput.innerHTML = `
-    <p>${message}</p>
-  `;
-}
+const demoBox = document.getElementById("demoBox");
+const keyPressed = document.getElementById("keyPressed");
 
 const eventList = document.getElementById("eventList");
+
+/* =========================
+   DOM TEXT COMPARISON DEMO
+========================= */
+
+function showDOMComparison() {
+
+    const htmlValue = demoBox.innerHTML;
+    const textValue = demoBox.innerText;
+    const contentValue = demoBox.textContent;
+
+    domOutput.innerHTML = `
+        <p><strong>innerHTML:</strong> ${htmlValue}</p>
+        <p><strong>innerText:</strong> ${textValue}</p>
+        <p><strong>textContent:</strong> ${contentValue}</p>
+    `;
+}
+
+showDOMComparison();
+
+/* =========================
+   KEY PRESS DETECTOR
+========================= */
+
+document.addEventListener("keydown", (e) => {
+    keyPressed.textContent = e.key;
+});
+
+/* =========================
+   EVENT MANAGER FUNCTIONS
+========================= */
 
 function addEvent() {
     const title = document.getElementById("title").value;
@@ -21,54 +48,37 @@ function addEvent() {
 
     createEvent(title, date, category, description);
 
-    showDOMAction(`
-    <strong>Event Added</strong><br>
-     document.createElement() : Add a new event card  <br>
-     innerHTML() : Event content has been inserted<br>
-     appendChild() : Added to the event list
-  `);
-
     document.getElementById("title").value = "";
     document.getElementById("date").value = "";
     document.getElementById("description").value = "";
 }
 
-
 function createEvent(title, date, category, description) {
+
     const div = document.createElement("div");
     div.className = "event";
 
     div.innerHTML = `
-    <div class="delete">×</div>
-    <h3>${title}</h3>
-    <p>📅 ${date}</p>
-    <span class="tag">${category}</span>
-    <p>${description}</p>
-  `;
+        <div class="delete">×</div>
+        <h3>${title}</h3>
+        <p>📅 ${date}</p>
+        <span class="tag">${category}</span>
+        <p>${description}</p>
+    `;
 
     div.querySelector(".delete").addEventListener("click", () => {
         div.remove();
-        showDOMAction(`
-      <strong>Event Deleted</strong><br>
-      remove() : Event card has been removed from the DOM
-    `);
     });
 
     eventList.appendChild(div);
 }
 
-
 function clearEvents() {
     eventList.innerHTML = "";
-
-    showDOMAction(`
-    <strong>All Events Cleared</strong><br>
-    innerHTML() : The entire DOM has been cleared
-  `);
 }
 
-
 function addSampleEvents() {
+
     clearEvents();
 
     createEvent(
@@ -84,11 +94,4 @@ function addSampleEvents() {
         "Conference",
         "JavaScript & Web Dev"
     );
-
-    showDOMAction(`
-    <strong>Sample Events Added</strong><br>
-     createElement() : Multiple elements have been created<br>
-     appendChild() : Added to the list
-  `);
 }
-
